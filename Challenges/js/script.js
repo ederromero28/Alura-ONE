@@ -5,6 +5,8 @@ const outputTextArea = document.getElementById("outputTextArea");
 const btnCopyResult = document.getElementById("btnCopyResult");
 const pre_information = document.getElementsByClassName("pre-information");
 
+
+
 const keysEncoded = {
   e: "enter",
   i: "imes",
