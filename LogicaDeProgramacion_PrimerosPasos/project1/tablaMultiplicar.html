@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>PROGRAMA CALCULAR LA TABLA DE MULTIPLICAR</h1>
+
+</body>
+
+<script>
+
+    function saltarLinea() {
+        document.write("<br><br>");
+    }
+    function imprimir(mensaje) {
+        document.write(mensaje)
+        saltarLinea();
+    }
+
+    // CON FUNCION PARA CREAR TABLAS DE MANERA DINAMICA
+    function tablaMultiplicar(numTabla, numRango, multiplicar) {
+        for (let i = 1; i <= numRango; i++) {
+            multiplicar = numTabla * i;
+            imprimir(numTabla + " x " + i + " = " + multiplicar)
+        }
+    }
+
+    let numeroMultiplicar = parseInt(prompt("Ingrese un número para sacar tu tabla de multiplicar:"))
+    let rangoMultiplicar = parseInt(prompt("Ingrese el rango a multiplicar:"))
+    let multiplicar;
+
+    tablaMultiplicar(numeroMultiplicar,rangoMultiplicar)
+
+    // PRIMERA PARTE
+    // for (let i = 1; i <= rangoMultiplicar; i++) {
+    //     multiplicar = numeroMultiplicar * i;
+    //     imprimir(numeroMultiplicar + " x " + i + " = " + multiplicar)
+    // }
+
+    // SEGUNDA PARTE - MODO PRUEBA CON WHILE
+    // let multiplicador = 1
+
+    // while (multiplicador <= 10) {
+    //     imprimir(multiplicador)
+    //     multiplicador++
+    // }
+
+</script>
+
+</html>

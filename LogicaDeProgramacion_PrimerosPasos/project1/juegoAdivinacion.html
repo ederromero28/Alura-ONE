@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>PROGRAMA JUEGO DE ADIVINACION</h1>
+
+</body>
+
+<script>
+
+    function saltarLinea() {
+        document.write("<br><br>");
+    }
+    function imprimir(mensaje) {
+        document.write(mensaje)
+        saltarLinea();
+    }
+
+    function sorteo(n) {
+        return Math.round(Math.random() * n)
+    }
+
+    // let numeroPensado = sorteo(10)
+    // let numeroLanzado = parseInt(prompt("Ingrese un número entre 0 y 10:"))
+    // let intentos = 3
+    // contador = 1
+
+    // if (numeroPensado == numeroLanzado) {
+    //     imprimir("USTED ACERTO")
+    // } else {
+    //     imprimir("USTED NO ACERTO, EL NUMERO ACERTADO ERA: " + numeroPensado)
+    //     if (numeroLanzado > numeroPensado) {
+    //         imprimir("Usted erró, el número " + numeroLanzado + " era mayor que el número pensado: "+ numeroPensado)
+    //     }
+    //     else {
+    //         imprimir("Usted erró, el número " + numeroLanzado + " era menor que el número pensado: "+ numeroPensado)
+    //     }
+    // }
+
+    let numeroLanzado
+    let numeroPensado = Math.round(Math.random() * 10)
+    let intentos = parseInt(prompt("En cuantos intentos los quieres realizar ?"))
+    let contador = 1
+
+    while (contador <= intentos) {
+        numeroLanzado = parseInt(prompt("Ingrese un número entre 0-10"))
+
+        if (numeroPensado == numeroLanzado) {
+            alert("Usted acerto, en el intento " + contador + " el número pensado era " + numeroPensado)
+            break;
+        }else{
+            alert("Usted erró")
+        }
+        contador++
+    }
+    if (numeroPensado == numeroLanzado) {
+        imprimir("Usted acertó, en el intento " + contador + " el número pensando era " + numeroPensado)
+    } else {
+        imprimir("Usted erró, el número pensado era: " + numeroPensado)
+    }
+    imprimir("FIN")
+
+</script>
+
+</html>

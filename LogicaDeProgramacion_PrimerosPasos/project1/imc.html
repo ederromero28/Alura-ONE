@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>CALCULAR IMC</h1>
+
+</body>
+
+<script>
+
+    //CALCULAR EL INDICE DE LA MASA CORPORAL DE UNA PERSONA
+
+    // function saltarLinea() {
+    //     document.write("<br><br>");
+    // }
+    // function imprimir(mensaje) {
+    //     document.write(mensaje)
+    //     saltarLinea();
+    // }
+
+    // function calcularIMC(peso,altura,nombre) {
+    //     let imc = peso / (altura * altura)
+    //     imprimir("El IMC calculado de "+ "<strong>"+nombre+"</strong>" + " es: " + imc)
+    // }
+
+    // calcularIMC(64, 1.69,"Eder")
+    // calcularIMC(79, 1.72,"Bodoque")
+
+
+    function saltarLinea() {
+        document.write("<br><br>");
+    }
+    function imprimir(mensaje) {
+        document.write(mensaje)
+        saltarLinea();
+    }
+
+    function calcularIMC(peso, altura) {
+        return (peso / (altura * altura))
+
+    }
+    // PARTE 1
+    // let imcEder = calcularIMC(64, 1.72)
+    // let imcDoko = calcularIMC(74, 1.65)
+
+    // imprimir("El promedio del IMC calculado de Eder y Doko es: " + (imcEder+imcDoko)/2)
+
+    // PARTE 2
+    // imprimir("El promedio del IMC calculado de Eder y Doko es: " + (calcularIMC(71, 1.71) + calcularIMC(75, 1.73)) / 2)
+    // imprimir("El promedio del IMC calculado de Turry y Patotas es: " + (calcularIMC(85, 1.69) + calcularIMC(69, 1.70)) / 2)
+
+
+    //PARTE 3
+    let nombre = prompt("Informe su nombre:")
+    let pesoInformado = prompt(nombre + ", informe su peso:")
+    let alturaInformado = prompt(nombre + ",informe su altura:")
+
+    let imcCalculado = calcularIMC(pesoInformado, alturaInformado)
+
+    imprimir(nombre + " su IMC calculado es: " + imcCalculado)
+
+    if (imcCalculado < 18.5) {
+        imprimir("IMC -> Insuficiencia ponderal")
+    } else if ((imcCalculado >= 18.5) && (imcCalculado <= 24.9)) {
+        imprimir("IMC -> Intervalo normal")
+    } else if ((imcCalculado >= 25) && (imcCalculado < 30)) {
+        imprimir("IMC -> Sobre peso")
+    } else if(imcCalculado >= 30){
+        imprimir("IMC -> Considerado como obesidad")
+    } else{
+        imprimir("SIN INFORMACION ADICIONAL")
+    }
+
+</script>
+
+</html>

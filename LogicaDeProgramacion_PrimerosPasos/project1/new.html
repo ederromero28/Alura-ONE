@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Juego de Adivinacion</h1>
+
+    <p>Ingresa un numero entre 0-10: </p>
+    <input />
+    <button>¡Adivinemos!</button>
+
+
+    <script>
+
+        function saltolinea() {
+            document.write("<br>");
+        }
+
+        function imprimir(frase) {
+            document.write(frase);
+            saltolinea();
+        }
+        let numlanzado = document.querySelector("input");
+
+        let numpensado = Math.round(Math.random() * 10); //Extesion Math: .round redondea numero a entero, .random elige numero del 0 al 1
+        let intentos = 3;
+
+        function adivinanza() {
+            numlanzado = document.querySelector("input");
+
+            while (intentos != 0) {
+
+                if (parseInt(numlanzado.value) == numpensado) {
+                    alert("¡Felicidades! Adivinaste el numero escondido en el intento N°" + (4 - intentos) + " el número pensado era: " + numpensado)
+                    // Cambiamos imprimir a alert, para visarnos si ganamos o no.
+                    imprimir("¡Felicidades! Adivinaste el numero escondido en el intento N°" + (4 - intentos) + " el número pensado era: " + numpensado)
+                    // Cambiamos imprimir a alert, para visarnos si ganamos o no.
+                    break;
+                }
+                else {
+                    if (intentos == 1) {
+                        imprimir("¡Fallaste! Número equivocado, el correcto era " + numpensado);
+                        imprimir("GAME OVER");
+                    }
+                    else {
+                        alert("¡Fallaste! Número equivocado.");
+                    }
+                }
+                intentos--;
+                break;
+            }
+        }
+
+        let button = document.querySelector("button");
+        button.onclick = adivinanza;
+        // if (numlanzado==numpensado) {
+        //     imprimir("¡Felicidades! Adivinaste el numero escondido, en el intento N°"+intentos+" el número pensado era: "+numpensado)// Cambiamos imprimir a alert, para visarnos si ganamos o no.
+        // }
+        // else {
+        //     imprimir("¡Fallaste! Número equivocado, el correcto era "+numpensado)
+        //     imprimir("GAME OVER")
+        // }
+
+        // let edad = parseInt(prompt("¿Cuál es tu edad?"));
+        // let tieneLicencia = prompt("¿Tienes licencia? Responde S o N");
+
+        // if (edad>=18 && tieneLicencia=="S") {
+        //     imprimir("Puedes conducir");
+        // } else {
+        //     imprimir("No puedes conducir")
+        // }
+
+
+    </script>
+</body>
+
+</html>

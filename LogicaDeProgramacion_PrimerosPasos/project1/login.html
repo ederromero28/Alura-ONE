@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function saltarLinea() {
+            document.write("<br><br>");
+        }
+        function imprimir(mensaje) {
+            document.write(mensaje)
+            saltarLinea();
+        }
+
+        let inicioDeSesionRegistrado = "admin";
+        let contrasenhaRegistrada = "private";
+        let inicioDeSesionIngresado
+        let contrasenhaIngresada
+        let intentos = 3
+        let contador = 1
+
+        while (contador <= intentos) {
+            inicioDeSesionIngresado = prompt("Ingrese su usuario");
+            contrasenhaIngresada = prompt("Ingrese su contraseña");
+
+            if ((inicioDeSesionRegistrado == inicioDeSesionIngresado) && (contrasenhaRegistrada == contrasenhaIngresada)){
+                alert("Bienvenido al sistema " + inicioDeSesionIngresado);
+                break;
+            } else {
+                alert("inicio de sesión inválido. Favor intente de nuevo");
+            }
+            contador++
+        }
+
+        if ((inicioDeSesionRegistrado == inicioDeSesionIngresado) && (contrasenhaRegistrada == contrasenhaIngresada)){
+            imprimir("BIENVENIDO AL SISTEMA")
+        }else{
+            imprimir("ERROR EN LAS CREDENCIALES")
+        }
+        imprimir("FIN")
+
+    </script>
+
+</body>
+
+</html>
