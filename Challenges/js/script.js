@@ -13,6 +13,7 @@ const keysEncoded = {
   u: "ufat",
 };
 
+
 inputTextArea.addEventListener("input", validateText);
 
 function encrypt() {
