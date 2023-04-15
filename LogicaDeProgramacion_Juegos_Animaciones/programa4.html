@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas width="600" height="400" style="border-color: black;">
+
+    </canvas>
+
+
+    <script>
+
+        function dibujarCuadrado(x, y,color) {
+            let pantalla = document.querySelector('canvas')
+            let pincel = pantalla.getContext("2d")
+            pincel.fillStyle = color; // propiedad o caracteristicas
+            pincel.fillRect(x, y, 50, 50) // funcion
+            pincel.strokeStyle = "black"
+            pincel.strokeRect(x, y, 50, 50)
+        }
+
+        // PRIMERA PARTE HACIENDO CUADROS CON CANVAS
+        // dibujarCuadrado(0, 0, "green")
+        // dibujarCuadrado(0, 50, "green")
+        // dibujarCuadrado(0, 100, "green")
+
+        // dibujarCuadrado(0, 0, "green")
+        // dibujarCuadrado(50, 0, "green")
+        // dibujarCuadrado(100, 0, "green")
+
+    //     function dibujarRectangulo(x,y,color,altura){
+    //     var pantalla = document.querySelector("canvas");
+    //     var pincel = pantalla.getContext("2d");
+    //     pincel.fillStyle = color;
+    //     pincel.fillRect(x,y,50,altura);
+    //     pincel.strokeStyle = "black";
+    //     pincel.strokeRect(x,y,50,altura);
+    // }
+
+    // dibujarRectangulo(150,150,"red",Math.round(Math.random()*50));
+    
+    // SEGUNDA PARTE HACIENDO CUADROS CON WHILE
+    /*let x = 0;
+    while (x < 600) {
+        // VERTICAL
+        // dibujarCuadrado(0,x,"yellow")
+        // dibujarCuadrado(50,x,"blue")
+        // dibujarCuadrado(100,x,"red")
+
+        // HORIZONTAL
+        dibujarCuadrado(x,0,"lightblue")
+        dibujarCuadrado(x,50,"white")
+        dibujarCuadrado(x,100,"lightblue")
+
+        x = x + 50;
+    }
+    */
+
+    for (let x = 0; x < 600; x += 50) {
+        dibujarCuadrado(x,0,"lightblue")
+        dibujarCuadrado(x,50,"white")
+        dibujarCuadrado(x,100,"lightblue")
+    }
+
+
+    </script>
+</body>
+
+</html>
